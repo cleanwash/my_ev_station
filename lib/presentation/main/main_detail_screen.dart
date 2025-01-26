@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_ev_station/core/component/app_bar_main.dart';
 import 'package:my_ev_station/core/route/router_path.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +33,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
       (card) => card.cardName == widget.cardName,
     );
     return Scaffold(
+      appBar: AppBarMain(title: card.cardName),
       body: Column(
         children: [
           Container(
