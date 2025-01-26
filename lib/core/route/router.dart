@@ -3,6 +3,7 @@ import 'package:my_ev_station/core/navigation/navigation_screen.dart';
 import 'package:my_ev_station/core/route/router_path.dart';
 import 'package:my_ev_station/data/data_source/api_data.dart';
 import 'package:my_ev_station/data/repository/card_repository_impl.dart';
+import 'package:my_ev_station/presentation/main/main_detail_screen.dart';
 import 'package:my_ev_station/presentation/main/main_screen.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
 import 'package:my_ev_station/presentation/splash/splash.dart';
@@ -41,11 +42,29 @@ final router = GoRouter(
                 ),
                 child: MainScreen(
                   onTapDetail: (card) {
-                    context.go(RouterPath.cardDetail);
+                    context.push(
+                        '${RouterPath.main}/${RouterPath.cardDetail}/${card.cardName}');
                   },
                 ),
               ),
-            )
+              routes: [
+                GoRoute(
+                  path: '${RouterPath.cardDetail}/:name',
+                  builder: (context, state) {
+                    return ChangeNotifierProvider(
+                      create: (context) => MainViewModel(
+                        cardRepository: CardRepositoryImpl(
+                          api: ApiData(),
+                        ),
+                      ),
+                      child: MainDetailScreen(
+                        cardName: state.pathParameters['name'] ?? '',
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ],

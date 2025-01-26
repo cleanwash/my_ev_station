@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:my_ev_station/core/component/card_item.dart';
 import 'package:my_ev_station/domain/model/card_model.dart';
 

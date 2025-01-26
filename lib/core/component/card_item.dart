@@ -4,14 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_ev_station/domain/model/card_model.dart';
 
 class CardItem extends StatelessWidget {
-  final VoidCallback onTap;
-
   final CardModel cardModel;
+  final VoidCallback onTap;
 
   const CardItem({
     super.key,
-    required this.onTap,
     required this.cardModel,
+    required this.onTap,
   });
 
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:my_ev_station/core/component/card_list.dart';
+import 'package:my_ev_station/core/component/card_list_widget.dart';
 import 'package:my_ev_station/data/data_source/mock_all_eligible_companies.dart';
 import 'package:my_ev_station/domain/model/card_model.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
@@ -19,6 +18,14 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   String selectedCompany = allEligibleCompanies.first;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() {
+      context.read<MainViewModel>().loadCards();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
