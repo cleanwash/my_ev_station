@@ -82,29 +82,28 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                   children: [
                     Text(
                       '할인 정보',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge
-                          ?.copyWith(color: Colors.white),
                     ),
                     ...card.discountTiers.map((tier) => ListTile(
                           title: Text('최대 할인: ${tier.maximumDiscount}원',
-                              style: TextStyle(color: Colors.white)),
+                              style: TextStyle(color: Colors.black)),
                           subtitle: Text('월 할인율: ${tier.monthlyDiscountRate}%',
-                              style: TextStyle(color: Colors.white70)),
+                              style: TextStyle(color: Colors.black)),
                         )),
                     const SizedBox(height: 16),
                     Text(
                       '사용 가능 회사',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge
-                          ?.copyWith(color: Colors.white),
                     ),
-                    ...card.eligibleCompanies.map((company) => ListTile(
-                          title: Text(company,
-                              style: TextStyle(color: Colors.white)),
-                        )),
+                    ...(() {
+                      final companies = card.eligibleCompanies.toList()..sort();
+                      return companies.map(
+                        (company) => ListTile(
+                          title: Text(
+                            company,
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      );
+                    })(),
                   ],
                 ),
               ),
