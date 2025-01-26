@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         prefs.getBool('onboarding_complete') ?? false;
     if (!mounted) return;
     if (onboardingComplete) {
-      context.go(RouterPath.card);
+      context.go(RouterPath.main);
     }
   }
 
@@ -70,6 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
           final prefs = await SharedPreferences.getInstance();
           await prefs.setBool('onboarding_complete', true);
           if (!mounted) return;
+          context.go(RouterPath.main);
         },
       ),
     );

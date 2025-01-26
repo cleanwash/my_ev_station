@@ -1,6 +1,12 @@
 import 'package:go_router/go_router.dart';
+import 'package:my_ev_station/core/navigation/navigation_screen.dart';
 import 'package:my_ev_station/core/route/router_path.dart';
+import 'package:my_ev_station/data/data_source/api_data.dart';
+import 'package:my_ev_station/data/repository/card_repository_impl.dart';
+import 'package:my_ev_station/presentation/main/main_screen.dart';
+import 'package:my_ev_station/presentation/main/main_view_model.dart';
 import 'package:my_ev_station/presentation/splash/splash.dart';
+import 'package:provider/provider.dart';
 
 final router = GoRouter(
   initialLocation: RouterPath.splash,
@@ -9,5 +15,40 @@ final router = GoRouter(
       path: RouterPath.splash,
       builder: (context, state) => SplashScreen(),
     ),
+    StatefulShellRoute.indexedStack(
+      builder: (context, state, navigationShell) {
+        return NavigationScreen(
+          body: navigationShell,
+          currentPageIndex: navigationShell.currentIndex,
+          onChangeIndex: (index) {
+            navigationShell.goBranch(
+              index,
+              initialLocation: index == navigationShell.currentIndex,
+            );
+          },
+        );
+      },
+      branches: [
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: RouterPath.main,
+              builder: (context, state) => ChangeNotifierProvider(
+                create: (context) => MainViewModel(
+                  cardRepository: CardRepositoryImpl(
+                    api: ApiData(),
+                  ),
+                ),
+                child: MainScreen(
+                  onTapDetail: (card) {
+                    context.go(RouterPath.cardDetail);
+                  },
+                ),
+              ),
+            )
+          ],
+        ),
+      ],
+    )
   ],
 );
