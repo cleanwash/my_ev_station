@@ -6,6 +6,7 @@ import 'package:my_ev_station/data/repository/card_repository_impl.dart';
 import 'package:my_ev_station/presentation/main/main_detail_screen.dart';
 import 'package:my_ev_station/presentation/main/main_screen.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
+import 'package:my_ev_station/presentation/map/map_screen.dart';
 import 'package:my_ev_station/presentation/splash/splash.dart';
 import 'package:provider/provider.dart';
 
@@ -67,6 +68,14 @@ final router = GoRouter(
             ),
           ],
         ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: RouterPath.map,
+              builder: (context, state) => MapScreen(),
+            )
+          ],
+        )
       ],
     )
   ],
