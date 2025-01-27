@@ -53,7 +53,7 @@ class ChargerModel {
     );
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return {
       'statNm': statNm,
       'statId': statId,

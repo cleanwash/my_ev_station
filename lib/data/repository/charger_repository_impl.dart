@@ -1,21 +1,17 @@
-import 'dart:convert';
 import 'package:my_ev_station/data/data_source/ev_api.dart';
 import 'package:my_ev_station/domain/model/charger_model.dart';
 import 'package:my_ev_station/domain/repository/charger_repository.dart';
 
 class ChargerRepositoryImpl implements ChargerRepository {
-  final EvApi api;
+  final EvApi _api;
 
-  ChargerRepositoryImpl({
-    required this.api,
-  });
+  ChargerRepositoryImpl({required EvApi api}) : _api = api;
 
   @override
   Future<List<ChargerModel>> getChargers() async {
-    final response = await api.getChargerInfo();
-    final Map<String, dynamic> jsonResponse = jsonDecode(response.body);
-    final items = jsonResponse['items']['item'] as List<dynamic>;
-
-    return items.map((item) => ChargerModel.fromJson(item)).toList();
+    print('Repository: getChargers 호출됨');
+    final chargers = await _api.getChargerInfo();
+    print('Repository: 받은 데이터 개수: ${chargers.length}');
+    return chargers;
   }
 }

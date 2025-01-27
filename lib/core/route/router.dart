@@ -2,11 +2,14 @@ import 'package:go_router/go_router.dart';
 import 'package:my_ev_station/core/navigation/navigation_screen.dart';
 import 'package:my_ev_station/core/route/router_path.dart';
 import 'package:my_ev_station/data/data_source/api_data.dart';
+import 'package:my_ev_station/data/data_source/ev_api.dart';
 import 'package:my_ev_station/data/repository/card_repository_impl.dart';
+import 'package:my_ev_station/data/repository/charger_repository_impl.dart';
 import 'package:my_ev_station/presentation/main/main_detail_screen.dart';
 import 'package:my_ev_station/presentation/main/main_screen.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
 import 'package:my_ev_station/presentation/map/map_screen.dart';
+import 'package:my_ev_station/presentation/map/map_view_model.dart';
 import 'package:my_ev_station/presentation/splash/splash.dart';
 import 'package:provider/provider.dart';
 
@@ -72,7 +75,14 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: RouterPath.map,
-              builder: (context, state) => MapScreen(),
+              builder: (context, state) => ChangeNotifierProvider(
+                create: (context) => MapViewModel(
+                  chargerRepository: ChargerRepositoryImpl(
+                    api: EvApi(),
+                  ),
+                ),
+                child: MapScreen(),
+              ),
             )
           ],
         )
