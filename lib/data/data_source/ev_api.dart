@@ -8,14 +8,11 @@ class EvApi {
   final apiKey = dotenv.env['EV_API'];
 
   Future<List<ChargerModel>> getChargerInfo() async {
-    print('API Key: $apiKey');
-
     final response = await http.get(Uri.parse(
         'https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey=$apiKey&pageNo=1&numOfRows=10&zcode=11'));
 
-    // XML을 JSON으로 변환
     final transformer = Xml2Json();
-    transformer.parse(utf8.decode(response.bodyBytes)); // UTF-8 디코딩 추가
+    transformer.parse(utf8.decode(response.bodyBytes));
     final jsonString = transformer.toParker();
 
     // JSON 파싱

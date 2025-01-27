@@ -9,9 +9,7 @@ class ChargerRepositoryImpl implements ChargerRepository {
 
   @override
   Future<List<ChargerModel>> getChargers() async {
-    print('Repository: getChargers 호출됨');
     final chargers = await _api.getChargerInfo();
-    print('Repository: 받은 데이터 개수: ${chargers.length}');
     return chargers;
   }
 }

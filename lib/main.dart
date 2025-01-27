@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_naver_map/flutter_naver_map.dart';
 import 'package:my_ev_station/core/route/router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //전기차 충전 api 정보
   await dotenv.load(fileName: ".env");
+//네이버 지도
+  await NaverMapSdk.instance.initialize(
+    clientId: dotenv.env['CLIENTID']!,
+    onAuthFailed: (ex) => print('네이버 맵 인증 오류 :$ex'),
+  );
   runApp(const MyApp());
 }
 

@@ -24,8 +24,6 @@ class _MapScreenState extends State<MapScreen> {
       body: Consumer<MapViewModel>(
         builder: (context, viewModel, child) {
           final state = viewModel.state;
-          print('현재 상태 - isLoading: ${state.isLoading}');
-          print('충전소 목록 개수: ${state.chargers.length}');
 
           if (state.isLoading) {
             return const Center(child: CircularProgressIndicator());
