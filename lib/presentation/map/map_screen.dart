@@ -34,6 +34,7 @@ class _MapScreenState extends State<MapScreen> {
             itemBuilder: (context, index) {
               final charger = state.chargers[index];
               print('충전소 $index: ${charger.statNm} - ${charger.addr}');
+              print('충전소 $index: ${charger.lat} - ${charger.lng}');
               return ListTile(
                 title: Text(charger.statNm),
                 subtitle: Text(charger.addr),
