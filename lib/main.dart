@@ -10,7 +10,6 @@ Future<void> main() async {
 //네이버 지도
   await NaverMapSdk.instance.initialize(
     clientId: dotenv.env['CLIENTID']!,
-    onAuthFailed: (ex) => print('네이버 맵 인증 오류 :$ex'),
   );
   runApp(const MyApp());
 }
