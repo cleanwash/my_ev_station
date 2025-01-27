@@ -9,7 +9,7 @@ class EvApi {
 
   Future<List<ChargerModel>> getChargerInfo() async {
     final response = await http.get(Uri.parse(
-        'https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey=$apiKey&pageNo=1&numOfRows=10&zcode=11'));
+        'https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey=$apiKey'));
 
     final transformer = Xml2Json();
     transformer.parse(utf8.decode(response.bodyBytes));

@@ -5,6 +5,8 @@ import 'package:my_ev_station/data/data_source/api_data.dart';
 import 'package:my_ev_station/data/data_source/ev_api.dart';
 import 'package:my_ev_station/data/repository/card_repository_impl.dart';
 import 'package:my_ev_station/data/repository/charger_repository_impl.dart';
+import 'package:my_ev_station/domain/repository/naver_map_repository.dart';
+import 'package:my_ev_station/domain/use_case/get_charger_use_case.dart';
 import 'package:my_ev_station/presentation/main/main_detail_screen.dart';
 import 'package:my_ev_station/presentation/main/main_screen.dart';
 import 'package:my_ev_station/presentation/main/main_view_model.dart';
@@ -77,8 +79,11 @@ final router = GoRouter(
               path: RouterPath.map,
               builder: (context, state) => ChangeNotifierProvider(
                 create: (context) => MapViewModel(
-                  chargerRepository: ChargerRepositoryImpl(
-                    api: EvApi(),
+                  getChargersUseCase: GetChargersUseCase(
+                    mapRepository: NaverMapRepository(),
+                    repository: ChargerRepositoryImpl(
+                      api: EvApi(),
+                    ),
                   ),
                 ),
                 child: MapScreen(),
