@@ -31,9 +31,6 @@ class _MapScreenState extends State<MapScreen> {
     final state = viewModel.state;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('충전소 지도'),
-      ),
       body: state.isLoading
           ? const Center(child: CircularProgressIndicator())
           : NaverMap(
@@ -41,7 +38,7 @@ class _MapScreenState extends State<MapScreen> {
                 indoorEnable: true,
                 locationButtonEnable: true,
                 consumeSymbolTapEvents: true,
-                symbolScale: 1.0, // 마커 크기 설정
+                symbolScale: 1.0,
               ),
               onMapReady: (controller) async {
                 // async 추가
@@ -51,7 +48,7 @@ class _MapScreenState extends State<MapScreen> {
                 print('현재 충전소 데이터 수: ${state.chargers.length}');
 
                 // 마커 추가를 약간 지연
-                Future.delayed(const Duration(milliseconds: 500), () {
+                Future.delayed(const Duration(seconds: 5), () {
                   for (var charger in state.chargers) {
                     print('마커 추가: ${charger.statNm}');
                     controller.addOverlay(

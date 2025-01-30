@@ -5,7 +5,6 @@ import 'package:my_ev_station/core/route/router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //전기차 충전 api 정보
   await dotenv.load(fileName: ".env");
 //네이버 지도
   await NaverMapSdk.instance.initialize(
