@@ -9,6 +9,8 @@ class MapUiState with _$MapUiState {
   factory MapUiState({
     @Default(false) bool isLoading,
     @Default([]) List<ChargerModel> chargers,
+    ChargerModel? selectedCharger,
+    @Default(false) bool isDetailVisible,
   }) = _MapUiState;
 
   factory MapUiState.fromJson(Map<String, dynamic> json) =>
