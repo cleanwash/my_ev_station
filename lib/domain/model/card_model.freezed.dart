@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,786 +9,1112 @@ part of 'card_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-CardModel _$CardModelFromJson(Map<String, dynamic> json) {
-  return _CardModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CardModel {
-  String get cardName => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
-  List<DiscountTier> get discountTiers => throw _privateConstructorUsedError;
-  List<String> get eligibleCompanies => throw _privateConstructorUsedError;
+
+ String get cardName; String get imageUrl; List<DiscountTier> get discountTiers; List<String> get eligibleCompanies;
+/// Create a copy of CardModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CardModelCopyWith<CardModel> get copyWith => _$CardModelCopyWithImpl<CardModel>(this as CardModel, _$identity);
 
   /// Serializes this CardModel to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CardModelCopyWith<CardModel> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CardModel&&(identical(other.cardName, cardName) || other.cardName == cardName)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other.discountTiers, discountTiers)&&const DeepCollectionEquality().equals(other.eligibleCompanies, eligibleCompanies));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,cardName,imageUrl,const DeepCollectionEquality().hash(discountTiers),const DeepCollectionEquality().hash(eligibleCompanies));
+
+@override
+String toString() {
+  return 'CardModel(cardName: $cardName, imageUrl: $imageUrl, discountTiers: $discountTiers, eligibleCompanies: $eligibleCompanies)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CardModelCopyWith<$Res> {
-  factory $CardModelCopyWith(CardModel value, $Res Function(CardModel) then) =
-      _$CardModelCopyWithImpl<$Res, CardModel>;
-  @useResult
-  $Res call(
-      {String cardName,
-      String imageUrl,
-      List<DiscountTier> discountTiers,
-      List<String> eligibleCompanies});
-}
+abstract mixin class $CardModelCopyWith<$Res>  {
+  factory $CardModelCopyWith(CardModel value, $Res Function(CardModel) _then) = _$CardModelCopyWithImpl;
+@useResult
+$Res call({
+ String cardName, String imageUrl, List<DiscountTier> discountTiers, List<String> eligibleCompanies
+});
 
+
+
+
+}
 /// @nodoc
-class _$CardModelCopyWithImpl<$Res, $Val extends CardModel>
+class _$CardModelCopyWithImpl<$Res>
     implements $CardModelCopyWith<$Res> {
-  _$CardModelCopyWithImpl(this._value, this._then);
+  _$CardModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CardModel _self;
+  final $Res Function(CardModel) _then;
 
-  /// Create a copy of CardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cardName = null,
-    Object? imageUrl = null,
-    Object? discountTiers = null,
-    Object? eligibleCompanies = null,
-  }) {
-    return _then(_value.copyWith(
-      cardName: null == cardName
-          ? _value.cardName
-          : cardName // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      discountTiers: null == discountTiers
-          ? _value.discountTiers
-          : discountTiers // ignore: cast_nullable_to_non_nullable
-              as List<DiscountTier>,
-      eligibleCompanies: null == eligibleCompanies
-          ? _value.eligibleCompanies
-          : eligibleCompanies // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ) as $Val);
-  }
+/// Create a copy of CardModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? cardName = null,Object? imageUrl = null,Object? discountTiers = null,Object? eligibleCompanies = null,}) {
+  return _then(_self.copyWith(
+cardName: null == cardName ? _self.cardName : cardName // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: null == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String,discountTiers: null == discountTiers ? _self.discountTiers : discountTiers // ignore: cast_nullable_to_non_nullable
+as List<DiscountTier>,eligibleCompanies: null == eligibleCompanies ? _self.eligibleCompanies : eligibleCompanies // ignore: cast_nullable_to_non_nullable
+as List<String>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$CardModelImplCopyWith<$Res>
-    implements $CardModelCopyWith<$Res> {
-  factory _$$CardModelImplCopyWith(
-          _$CardModelImpl value, $Res Function(_$CardModelImpl) then) =
-      __$$CardModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String cardName,
-      String imageUrl,
-      List<DiscountTier> discountTiers,
-      List<String> eligibleCompanies});
 }
 
-/// @nodoc
-class __$$CardModelImplCopyWithImpl<$Res>
-    extends _$CardModelCopyWithImpl<$Res, _$CardModelImpl>
-    implements _$$CardModelImplCopyWith<$Res> {
-  __$$CardModelImplCopyWithImpl(
-      _$CardModelImpl _value, $Res Function(_$CardModelImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of CardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cardName = null,
-    Object? imageUrl = null,
-    Object? discountTiers = null,
-    Object? eligibleCompanies = null,
-  }) {
-    return _then(_$CardModelImpl(
-      cardName: null == cardName
-          ? _value.cardName
-          : cardName // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      discountTiers: null == discountTiers
-          ? _value._discountTiers
-          : discountTiers // ignore: cast_nullable_to_non_nullable
-              as List<DiscountTier>,
-      eligibleCompanies: null == eligibleCompanies
-          ? _value._eligibleCompanies
-          : eligibleCompanies // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [CardModel].
+extension CardModelPatterns on CardModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CardModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CardModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CardModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _CardModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CardModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CardModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String cardName,  String imageUrl,  List<DiscountTier> discountTiers,  List<String> eligibleCompanies)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CardModel() when $default != null:
+return $default(_that.cardName,_that.imageUrl,_that.discountTiers,_that.eligibleCompanies);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String cardName,  String imageUrl,  List<DiscountTier> discountTiers,  List<String> eligibleCompanies)  $default,) {final _that = this;
+switch (_that) {
+case _CardModel():
+return $default(_that.cardName,_that.imageUrl,_that.discountTiers,_that.eligibleCompanies);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String cardName,  String imageUrl,  List<DiscountTier> discountTiers,  List<String> eligibleCompanies)?  $default,) {final _that = this;
+switch (_that) {
+case _CardModel() when $default != null:
+return $default(_that.cardName,_that.imageUrl,_that.discountTiers,_that.eligibleCompanies);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CardModelImpl implements _CardModel {
-  _$CardModelImpl(
-      {required this.cardName,
-      required this.imageUrl,
-      required final List<DiscountTier> discountTiers,
-      required final List<String> eligibleCompanies})
-      : _discountTiers = discountTiers,
-        _eligibleCompanies = eligibleCompanies;
 
-  factory _$CardModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CardModelImplFromJson(json);
+class _CardModel implements CardModel {
+   _CardModel({required this.cardName, required this.imageUrl, required final  List<DiscountTier> discountTiers, required final  List<String> eligibleCompanies}): _discountTiers = discountTiers,_eligibleCompanies = eligibleCompanies;
+  factory _CardModel.fromJson(Map<String, dynamic> json) => _$CardModelFromJson(json);
 
-  @override
-  final String cardName;
-  @override
-  final String imageUrl;
-  final List<DiscountTier> _discountTiers;
-  @override
-  List<DiscountTier> get discountTiers {
-    if (_discountTiers is EqualUnmodifiableListView) return _discountTiers;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_discountTiers);
-  }
-
-  final List<String> _eligibleCompanies;
-  @override
-  List<String> get eligibleCompanies {
-    if (_eligibleCompanies is EqualUnmodifiableListView)
-      return _eligibleCompanies;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_eligibleCompanies);
-  }
-
-  @override
-  String toString() {
-    return 'CardModel(cardName: $cardName, imageUrl: $imageUrl, discountTiers: $discountTiers, eligibleCompanies: $eligibleCompanies)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CardModelImpl &&
-            (identical(other.cardName, cardName) ||
-                other.cardName == cardName) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
-            const DeepCollectionEquality()
-                .equals(other._discountTiers, _discountTiers) &&
-            const DeepCollectionEquality()
-                .equals(other._eligibleCompanies, _eligibleCompanies));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      cardName,
-      imageUrl,
-      const DeepCollectionEquality().hash(_discountTiers),
-      const DeepCollectionEquality().hash(_eligibleCompanies));
-
-  /// Create a copy of CardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CardModelImplCopyWith<_$CardModelImpl> get copyWith =>
-      __$$CardModelImplCopyWithImpl<_$CardModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CardModelImplToJson(
-      this,
-    );
-  }
+@override final  String cardName;
+@override final  String imageUrl;
+ final  List<DiscountTier> _discountTiers;
+@override List<DiscountTier> get discountTiers {
+  if (_discountTiers is EqualUnmodifiableListView) return _discountTiers;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_discountTiers);
 }
 
-abstract class _CardModel implements CardModel {
-  factory _CardModel(
-      {required final String cardName,
-      required final String imageUrl,
-      required final List<DiscountTier> discountTiers,
-      required final List<String> eligibleCompanies}) = _$CardModelImpl;
-
-  factory _CardModel.fromJson(Map<String, dynamic> json) =
-      _$CardModelImpl.fromJson;
-
-  @override
-  String get cardName;
-  @override
-  String get imageUrl;
-  @override
-  List<DiscountTier> get discountTiers;
-  @override
-  List<String> get eligibleCompanies;
-
-  /// Create a copy of CardModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CardModelImplCopyWith<_$CardModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+ final  List<String> _eligibleCompanies;
+@override List<String> get eligibleCompanies {
+  if (_eligibleCompanies is EqualUnmodifiableListView) return _eligibleCompanies;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_eligibleCompanies);
 }
 
-DiscountTier _$DiscountTierFromJson(Map<String, dynamic> json) {
-  return _DiscountTier.fromJson(json);
+
+/// Create a copy of CardModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CardModelCopyWith<_CardModel> get copyWith => __$CardModelCopyWithImpl<_CardModel>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$CardModelToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CardModel&&(identical(other.cardName, cardName) || other.cardName == cardName)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other._discountTiers, _discountTiers)&&const DeepCollectionEquality().equals(other._eligibleCompanies, _eligibleCompanies));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,cardName,imageUrl,const DeepCollectionEquality().hash(_discountTiers),const DeepCollectionEquality().hash(_eligibleCompanies));
+
+@override
+String toString() {
+  return 'CardModel(cardName: $cardName, imageUrl: $imageUrl, discountTiers: $discountTiers, eligibleCompanies: $eligibleCompanies)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CardModelCopyWith<$Res> implements $CardModelCopyWith<$Res> {
+  factory _$CardModelCopyWith(_CardModel value, $Res Function(_CardModel) _then) = __$CardModelCopyWithImpl;
+@override @useResult
+$Res call({
+ String cardName, String imageUrl, List<DiscountTier> discountTiers, List<String> eligibleCompanies
+});
+
+
+
+
+}
+/// @nodoc
+class __$CardModelCopyWithImpl<$Res>
+    implements _$CardModelCopyWith<$Res> {
+  __$CardModelCopyWithImpl(this._self, this._then);
+
+  final _CardModel _self;
+  final $Res Function(_CardModel) _then;
+
+/// Create a copy of CardModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? cardName = null,Object? imageUrl = null,Object? discountTiers = null,Object? eligibleCompanies = null,}) {
+  return _then(_CardModel(
+cardName: null == cardName ? _self.cardName : cardName // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: null == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String,discountTiers: null == discountTiers ? _self._discountTiers : discountTiers // ignore: cast_nullable_to_non_nullable
+as List<DiscountTier>,eligibleCompanies: null == eligibleCompanies ? _self._eligibleCompanies : eligibleCompanies // ignore: cast_nullable_to_non_nullable
+as List<String>,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$DiscountTier {
-  int get maximumDiscount => throw _privateConstructorUsedError;
-  int get monthlyDiscountRate => throw _privateConstructorUsedError;
-  PreviousMonthPerformance get previousMonthPerformance =>
-      throw _privateConstructorUsedError;
+
+ int get maximumDiscount; int get monthlyDiscountRate; PreviousMonthPerformance get previousMonthPerformance;
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DiscountTierCopyWith<DiscountTier> get copyWith => _$DiscountTierCopyWithImpl<DiscountTier>(this as DiscountTier, _$identity);
 
   /// Serializes this DiscountTier to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $DiscountTierCopyWith<DiscountTier> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DiscountTier&&(identical(other.maximumDiscount, maximumDiscount) || other.maximumDiscount == maximumDiscount)&&(identical(other.monthlyDiscountRate, monthlyDiscountRate) || other.monthlyDiscountRate == monthlyDiscountRate)&&(identical(other.previousMonthPerformance, previousMonthPerformance) || other.previousMonthPerformance == previousMonthPerformance));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,maximumDiscount,monthlyDiscountRate,previousMonthPerformance);
+
+@override
+String toString() {
+  return 'DiscountTier(maximumDiscount: $maximumDiscount, monthlyDiscountRate: $monthlyDiscountRate, previousMonthPerformance: $previousMonthPerformance)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $DiscountTierCopyWith<$Res> {
-  factory $DiscountTierCopyWith(
-          DiscountTier value, $Res Function(DiscountTier) then) =
-      _$DiscountTierCopyWithImpl<$Res, DiscountTier>;
-  @useResult
-  $Res call(
-      {int maximumDiscount,
-      int monthlyDiscountRate,
-      PreviousMonthPerformance previousMonthPerformance});
+abstract mixin class $DiscountTierCopyWith<$Res>  {
+  factory $DiscountTierCopyWith(DiscountTier value, $Res Function(DiscountTier) _then) = _$DiscountTierCopyWithImpl;
+@useResult
+$Res call({
+ int maximumDiscount, int monthlyDiscountRate, PreviousMonthPerformance previousMonthPerformance
+});
 
-  $PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance;
+
+$PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance;
+
 }
-
 /// @nodoc
-class _$DiscountTierCopyWithImpl<$Res, $Val extends DiscountTier>
+class _$DiscountTierCopyWithImpl<$Res>
     implements $DiscountTierCopyWith<$Res> {
-  _$DiscountTierCopyWithImpl(this._value, this._then);
+  _$DiscountTierCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final DiscountTier _self;
+  final $Res Function(DiscountTier) _then;
 
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? maximumDiscount = null,
-    Object? monthlyDiscountRate = null,
-    Object? previousMonthPerformance = null,
-  }) {
-    return _then(_value.copyWith(
-      maximumDiscount: null == maximumDiscount
-          ? _value.maximumDiscount
-          : maximumDiscount // ignore: cast_nullable_to_non_nullable
-              as int,
-      monthlyDiscountRate: null == monthlyDiscountRate
-          ? _value.monthlyDiscountRate
-          : monthlyDiscountRate // ignore: cast_nullable_to_non_nullable
-              as int,
-      previousMonthPerformance: null == previousMonthPerformance
-          ? _value.previousMonthPerformance
-          : previousMonthPerformance // ignore: cast_nullable_to_non_nullable
-              as PreviousMonthPerformance,
-    ) as $Val);
-  }
-
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance {
-    return $PreviousMonthPerformanceCopyWith<$Res>(
-        _value.previousMonthPerformance, (value) {
-      return _then(_value.copyWith(previousMonthPerformance: value) as $Val);
-    });
-  }
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? maximumDiscount = null,Object? monthlyDiscountRate = null,Object? previousMonthPerformance = null,}) {
+  return _then(_self.copyWith(
+maximumDiscount: null == maximumDiscount ? _self.maximumDiscount : maximumDiscount // ignore: cast_nullable_to_non_nullable
+as int,monthlyDiscountRate: null == monthlyDiscountRate ? _self.monthlyDiscountRate : monthlyDiscountRate // ignore: cast_nullable_to_non_nullable
+as int,previousMonthPerformance: null == previousMonthPerformance ? _self.previousMonthPerformance : previousMonthPerformance // ignore: cast_nullable_to_non_nullable
+as PreviousMonthPerformance,
+  ));
+}
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance {
+  
+  return $PreviousMonthPerformanceCopyWith<$Res>(_self.previousMonthPerformance, (value) {
+    return _then(_self.copyWith(previousMonthPerformance: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$DiscountTierImplCopyWith<$Res>
-    implements $DiscountTierCopyWith<$Res> {
-  factory _$$DiscountTierImplCopyWith(
-          _$DiscountTierImpl value, $Res Function(_$DiscountTierImpl) then) =
-      __$$DiscountTierImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {int maximumDiscount,
-      int monthlyDiscountRate,
-      PreviousMonthPerformance previousMonthPerformance});
 
-  @override
-  $PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance;
+/// Adds pattern-matching-related methods to [DiscountTier].
+extension DiscountTierPatterns on DiscountTier {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DiscountTier value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _DiscountTier() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DiscountTier value)  $default,){
+final _that = this;
+switch (_that) {
+case _DiscountTier():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DiscountTier value)?  $default,){
+final _that = this;
+switch (_that) {
+case _DiscountTier() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int maximumDiscount,  int monthlyDiscountRate,  PreviousMonthPerformance previousMonthPerformance)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _DiscountTier() when $default != null:
+return $default(_that.maximumDiscount,_that.monthlyDiscountRate,_that.previousMonthPerformance);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int maximumDiscount,  int monthlyDiscountRate,  PreviousMonthPerformance previousMonthPerformance)  $default,) {final _that = this;
+switch (_that) {
+case _DiscountTier():
+return $default(_that.maximumDiscount,_that.monthlyDiscountRate,_that.previousMonthPerformance);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int maximumDiscount,  int monthlyDiscountRate,  PreviousMonthPerformance previousMonthPerformance)?  $default,) {final _that = this;
+switch (_that) {
+case _DiscountTier() when $default != null:
+return $default(_that.maximumDiscount,_that.monthlyDiscountRate,_that.previousMonthPerformance);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$DiscountTierImplCopyWithImpl<$Res>
-    extends _$DiscountTierCopyWithImpl<$Res, _$DiscountTierImpl>
-    implements _$$DiscountTierImplCopyWith<$Res> {
-  __$$DiscountTierImplCopyWithImpl(
-      _$DiscountTierImpl _value, $Res Function(_$DiscountTierImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? maximumDiscount = null,
-    Object? monthlyDiscountRate = null,
-    Object? previousMonthPerformance = null,
-  }) {
-    return _then(_$DiscountTierImpl(
-      maximumDiscount: null == maximumDiscount
-          ? _value.maximumDiscount
-          : maximumDiscount // ignore: cast_nullable_to_non_nullable
-              as int,
-      monthlyDiscountRate: null == monthlyDiscountRate
-          ? _value.monthlyDiscountRate
-          : monthlyDiscountRate // ignore: cast_nullable_to_non_nullable
-              as int,
-      previousMonthPerformance: null == previousMonthPerformance
-          ? _value.previousMonthPerformance
-          : previousMonthPerformance // ignore: cast_nullable_to_non_nullable
-              as PreviousMonthPerformance,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DiscountTierImpl implements _DiscountTier {
-  _$DiscountTierImpl(
-      {required this.maximumDiscount,
-      required this.monthlyDiscountRate,
-      required this.previousMonthPerformance});
 
-  factory _$DiscountTierImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DiscountTierImplFromJson(json);
+class _DiscountTier implements DiscountTier {
+   _DiscountTier({required this.maximumDiscount, required this.monthlyDiscountRate, required this.previousMonthPerformance});
+  factory _DiscountTier.fromJson(Map<String, dynamic> json) => _$DiscountTierFromJson(json);
 
-  @override
-  final int maximumDiscount;
-  @override
-  final int monthlyDiscountRate;
-  @override
-  final PreviousMonthPerformance previousMonthPerformance;
+@override final  int maximumDiscount;
+@override final  int monthlyDiscountRate;
+@override final  PreviousMonthPerformance previousMonthPerformance;
 
-  @override
-  String toString() {
-    return 'DiscountTier(maximumDiscount: $maximumDiscount, monthlyDiscountRate: $monthlyDiscountRate, previousMonthPerformance: $previousMonthPerformance)';
-  }
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$DiscountTierCopyWith<_DiscountTier> get copyWith => __$DiscountTierCopyWithImpl<_DiscountTier>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DiscountTierImpl &&
-            (identical(other.maximumDiscount, maximumDiscount) ||
-                other.maximumDiscount == maximumDiscount) &&
-            (identical(other.monthlyDiscountRate, monthlyDiscountRate) ||
-                other.monthlyDiscountRate == monthlyDiscountRate) &&
-            (identical(
-                    other.previousMonthPerformance, previousMonthPerformance) ||
-                other.previousMonthPerformance == previousMonthPerformance));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, maximumDiscount,
-      monthlyDiscountRate, previousMonthPerformance);
-
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DiscountTierImplCopyWith<_$DiscountTierImpl> get copyWith =>
-      __$$DiscountTierImplCopyWithImpl<_$DiscountTierImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DiscountTierImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$DiscountTierToJson(this, );
 }
 
-abstract class _DiscountTier implements DiscountTier {
-  factory _DiscountTier(
-          {required final int maximumDiscount,
-          required final int monthlyDiscountRate,
-          required final PreviousMonthPerformance previousMonthPerformance}) =
-      _$DiscountTierImpl;
-
-  factory _DiscountTier.fromJson(Map<String, dynamic> json) =
-      _$DiscountTierImpl.fromJson;
-
-  @override
-  int get maximumDiscount;
-  @override
-  int get monthlyDiscountRate;
-  @override
-  PreviousMonthPerformance get previousMonthPerformance;
-
-  /// Create a copy of DiscountTier
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DiscountTierImplCopyWith<_$DiscountTierImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DiscountTier&&(identical(other.maximumDiscount, maximumDiscount) || other.maximumDiscount == maximumDiscount)&&(identical(other.monthlyDiscountRate, monthlyDiscountRate) || other.monthlyDiscountRate == monthlyDiscountRate)&&(identical(other.previousMonthPerformance, previousMonthPerformance) || other.previousMonthPerformance == previousMonthPerformance));
 }
 
-PreviousMonthPerformance _$PreviousMonthPerformanceFromJson(
-    Map<String, dynamic> json) {
-  return _PreviousMonthPerformance.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,maximumDiscount,monthlyDiscountRate,previousMonthPerformance);
+
+@override
+String toString() {
+  return 'DiscountTier(maximumDiscount: $maximumDiscount, monthlyDiscountRate: $monthlyDiscountRate, previousMonthPerformance: $previousMonthPerformance)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$DiscountTierCopyWith<$Res> implements $DiscountTierCopyWith<$Res> {
+  factory _$DiscountTierCopyWith(_DiscountTier value, $Res Function(_DiscountTier) _then) = __$DiscountTierCopyWithImpl;
+@override @useResult
+$Res call({
+ int maximumDiscount, int monthlyDiscountRate, PreviousMonthPerformance previousMonthPerformance
+});
+
+
+@override $PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance;
+
+}
+/// @nodoc
+class __$DiscountTierCopyWithImpl<$Res>
+    implements _$DiscountTierCopyWith<$Res> {
+  __$DiscountTierCopyWithImpl(this._self, this._then);
+
+  final _DiscountTier _self;
+  final $Res Function(_DiscountTier) _then;
+
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? maximumDiscount = null,Object? monthlyDiscountRate = null,Object? previousMonthPerformance = null,}) {
+  return _then(_DiscountTier(
+maximumDiscount: null == maximumDiscount ? _self.maximumDiscount : maximumDiscount // ignore: cast_nullable_to_non_nullable
+as int,monthlyDiscountRate: null == monthlyDiscountRate ? _self.monthlyDiscountRate : monthlyDiscountRate // ignore: cast_nullable_to_non_nullable
+as int,previousMonthPerformance: null == previousMonthPerformance ? _self.previousMonthPerformance : previousMonthPerformance // ignore: cast_nullable_to_non_nullable
+as PreviousMonthPerformance,
+  ));
+}
+
+/// Create a copy of DiscountTier
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PreviousMonthPerformanceCopyWith<$Res> get previousMonthPerformance {
+  
+  return $PreviousMonthPerformanceCopyWith<$Res>(_self.previousMonthPerformance, (value) {
+    return _then(_self.copyWith(previousMonthPerformance: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$PreviousMonthPerformance {
-  int get min => throw _privateConstructorUsedError;
-  int? get max => throw _privateConstructorUsedError;
+
+ int get min; int? get max;
+/// Create a copy of PreviousMonthPerformance
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PreviousMonthPerformanceCopyWith<PreviousMonthPerformance> get copyWith => _$PreviousMonthPerformanceCopyWithImpl<PreviousMonthPerformance>(this as PreviousMonthPerformance, _$identity);
 
   /// Serializes this PreviousMonthPerformance to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PreviousMonthPerformance
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PreviousMonthPerformanceCopyWith<PreviousMonthPerformance> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PreviousMonthPerformance&&(identical(other.min, min) || other.min == min)&&(identical(other.max, max) || other.max == max));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,min,max);
+
+@override
+String toString() {
+  return 'PreviousMonthPerformance(min: $min, max: $max)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PreviousMonthPerformanceCopyWith<$Res> {
-  factory $PreviousMonthPerformanceCopyWith(PreviousMonthPerformance value,
-          $Res Function(PreviousMonthPerformance) then) =
-      _$PreviousMonthPerformanceCopyWithImpl<$Res, PreviousMonthPerformance>;
-  @useResult
-  $Res call({int min, int? max});
-}
+abstract mixin class $PreviousMonthPerformanceCopyWith<$Res>  {
+  factory $PreviousMonthPerformanceCopyWith(PreviousMonthPerformance value, $Res Function(PreviousMonthPerformance) _then) = _$PreviousMonthPerformanceCopyWithImpl;
+@useResult
+$Res call({
+ int min, int? max
+});
 
+
+
+
+}
 /// @nodoc
-class _$PreviousMonthPerformanceCopyWithImpl<$Res,
-        $Val extends PreviousMonthPerformance>
+class _$PreviousMonthPerformanceCopyWithImpl<$Res>
     implements $PreviousMonthPerformanceCopyWith<$Res> {
-  _$PreviousMonthPerformanceCopyWithImpl(this._value, this._then);
+  _$PreviousMonthPerformanceCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PreviousMonthPerformance _self;
+  final $Res Function(PreviousMonthPerformance) _then;
 
-  /// Create a copy of PreviousMonthPerformance
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? min = null,
-    Object? max = freezed,
-  }) {
-    return _then(_value.copyWith(
-      min: null == min
-          ? _value.min
-          : min // ignore: cast_nullable_to_non_nullable
-              as int,
-      max: freezed == max
-          ? _value.max
-          : max // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
-  }
+/// Create a copy of PreviousMonthPerformance
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? min = null,Object? max = freezed,}) {
+  return _then(_self.copyWith(
+min: null == min ? _self.min : min // ignore: cast_nullable_to_non_nullable
+as int,max: freezed == max ? _self.max : max // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$PreviousMonthPerformanceImplCopyWith<$Res>
-    implements $PreviousMonthPerformanceCopyWith<$Res> {
-  factory _$$PreviousMonthPerformanceImplCopyWith(
-          _$PreviousMonthPerformanceImpl value,
-          $Res Function(_$PreviousMonthPerformanceImpl) then) =
-      __$$PreviousMonthPerformanceImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int min, int? max});
 }
 
-/// @nodoc
-class __$$PreviousMonthPerformanceImplCopyWithImpl<$Res>
-    extends _$PreviousMonthPerformanceCopyWithImpl<$Res,
-        _$PreviousMonthPerformanceImpl>
-    implements _$$PreviousMonthPerformanceImplCopyWith<$Res> {
-  __$$PreviousMonthPerformanceImplCopyWithImpl(
-      _$PreviousMonthPerformanceImpl _value,
-      $Res Function(_$PreviousMonthPerformanceImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of PreviousMonthPerformance
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? min = null,
-    Object? max = freezed,
-  }) {
-    return _then(_$PreviousMonthPerformanceImpl(
-      min: null == min
-          ? _value.min
-          : min // ignore: cast_nullable_to_non_nullable
-              as int,
-      max: freezed == max
-          ? _value.max
-          : max // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [PreviousMonthPerformance].
+extension PreviousMonthPerformancePatterns on PreviousMonthPerformance {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PreviousMonthPerformance value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PreviousMonthPerformance value)  $default,){
+final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PreviousMonthPerformance value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int min,  int? max)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance() when $default != null:
+return $default(_that.min,_that.max);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int min,  int? max)  $default,) {final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance():
+return $default(_that.min,_that.max);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int min,  int? max)?  $default,) {final _that = this;
+switch (_that) {
+case _PreviousMonthPerformance() when $default != null:
+return $default(_that.min,_that.max);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PreviousMonthPerformanceImpl implements _PreviousMonthPerformance {
-  _$PreviousMonthPerformanceImpl({required this.min, this.max});
 
-  factory _$PreviousMonthPerformanceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PreviousMonthPerformanceImplFromJson(json);
+class _PreviousMonthPerformance implements PreviousMonthPerformance {
+   _PreviousMonthPerformance({required this.min, this.max});
+  factory _PreviousMonthPerformance.fromJson(Map<String, dynamic> json) => _$PreviousMonthPerformanceFromJson(json);
 
-  @override
-  final int min;
-  @override
-  final int? max;
+@override final  int min;
+@override final  int? max;
 
-  @override
-  String toString() {
-    return 'PreviousMonthPerformance(min: $min, max: $max)';
-  }
+/// Create a copy of PreviousMonthPerformance
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PreviousMonthPerformanceCopyWith<_PreviousMonthPerformance> get copyWith => __$PreviousMonthPerformanceCopyWithImpl<_PreviousMonthPerformance>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PreviousMonthPerformanceImpl &&
-            (identical(other.min, min) || other.min == min) &&
-            (identical(other.max, max) || other.max == max));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, min, max);
-
-  /// Create a copy of PreviousMonthPerformance
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PreviousMonthPerformanceImplCopyWith<_$PreviousMonthPerformanceImpl>
-      get copyWith => __$$PreviousMonthPerformanceImplCopyWithImpl<
-          _$PreviousMonthPerformanceImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PreviousMonthPerformanceImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PreviousMonthPerformanceToJson(this, );
 }
 
-abstract class _PreviousMonthPerformance implements PreviousMonthPerformance {
-  factory _PreviousMonthPerformance({required final int min, final int? max}) =
-      _$PreviousMonthPerformanceImpl;
-
-  factory _PreviousMonthPerformance.fromJson(Map<String, dynamic> json) =
-      _$PreviousMonthPerformanceImpl.fromJson;
-
-  @override
-  int get min;
-  @override
-  int? get max;
-
-  /// Create a copy of PreviousMonthPerformance
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PreviousMonthPerformanceImplCopyWith<_$PreviousMonthPerformanceImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PreviousMonthPerformance&&(identical(other.min, min) || other.min == min)&&(identical(other.max, max) || other.max == max));
 }
 
-CardModelList _$CardModelListFromJson(Map<String, dynamic> json) {
-  return _CardModelList.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,min,max);
+
+@override
+String toString() {
+  return 'PreviousMonthPerformance(min: $min, max: $max)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PreviousMonthPerformanceCopyWith<$Res> implements $PreviousMonthPerformanceCopyWith<$Res> {
+  factory _$PreviousMonthPerformanceCopyWith(_PreviousMonthPerformance value, $Res Function(_PreviousMonthPerformance) _then) = __$PreviousMonthPerformanceCopyWithImpl;
+@override @useResult
+$Res call({
+ int min, int? max
+});
+
+
+
+
+}
+/// @nodoc
+class __$PreviousMonthPerformanceCopyWithImpl<$Res>
+    implements _$PreviousMonthPerformanceCopyWith<$Res> {
+  __$PreviousMonthPerformanceCopyWithImpl(this._self, this._then);
+
+  final _PreviousMonthPerformance _self;
+  final $Res Function(_PreviousMonthPerformance) _then;
+
+/// Create a copy of PreviousMonthPerformance
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? min = null,Object? max = freezed,}) {
+  return _then(_PreviousMonthPerformance(
+min: null == min ? _self.min : min // ignore: cast_nullable_to_non_nullable
+as int,max: freezed == max ? _self.max : max // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$CardModelList {
-  List<CardModel> get cards => throw _privateConstructorUsedError;
+
+ List<CardModel> get cards;
+/// Create a copy of CardModelList
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CardModelListCopyWith<CardModelList> get copyWith => _$CardModelListCopyWithImpl<CardModelList>(this as CardModelList, _$identity);
 
   /// Serializes this CardModelList to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CardModelList
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CardModelListCopyWith<CardModelList> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CardModelList&&const DeepCollectionEquality().equals(other.cards, cards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(cards));
+
+@override
+String toString() {
+  return 'CardModelList(cards: $cards)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CardModelListCopyWith<$Res> {
-  factory $CardModelListCopyWith(
-          CardModelList value, $Res Function(CardModelList) then) =
-      _$CardModelListCopyWithImpl<$Res, CardModelList>;
-  @useResult
-  $Res call({List<CardModel> cards});
-}
+abstract mixin class $CardModelListCopyWith<$Res>  {
+  factory $CardModelListCopyWith(CardModelList value, $Res Function(CardModelList) _then) = _$CardModelListCopyWithImpl;
+@useResult
+$Res call({
+ List<CardModel> cards
+});
 
+
+
+
+}
 /// @nodoc
-class _$CardModelListCopyWithImpl<$Res, $Val extends CardModelList>
+class _$CardModelListCopyWithImpl<$Res>
     implements $CardModelListCopyWith<$Res> {
-  _$CardModelListCopyWithImpl(this._value, this._then);
+  _$CardModelListCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CardModelList _self;
+  final $Res Function(CardModelList) _then;
 
-  /// Create a copy of CardModelList
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cards = null,
-  }) {
-    return _then(_value.copyWith(
-      cards: null == cards
-          ? _value.cards
-          : cards // ignore: cast_nullable_to_non_nullable
-              as List<CardModel>,
-    ) as $Val);
-  }
+/// Create a copy of CardModelList
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? cards = null,}) {
+  return _then(_self.copyWith(
+cards: null == cards ? _self.cards : cards // ignore: cast_nullable_to_non_nullable
+as List<CardModel>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$CardModelListImplCopyWith<$Res>
-    implements $CardModelListCopyWith<$Res> {
-  factory _$$CardModelListImplCopyWith(
-          _$CardModelListImpl value, $Res Function(_$CardModelListImpl) then) =
-      __$$CardModelListImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<CardModel> cards});
 }
 
-/// @nodoc
-class __$$CardModelListImplCopyWithImpl<$Res>
-    extends _$CardModelListCopyWithImpl<$Res, _$CardModelListImpl>
-    implements _$$CardModelListImplCopyWith<$Res> {
-  __$$CardModelListImplCopyWithImpl(
-      _$CardModelListImpl _value, $Res Function(_$CardModelListImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of CardModelList
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cards = null,
-  }) {
-    return _then(_$CardModelListImpl(
-      cards: null == cards
-          ? _value._cards
-          : cards // ignore: cast_nullable_to_non_nullable
-              as List<CardModel>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [CardModelList].
+extension CardModelListPatterns on CardModelList {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CardModelList value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CardModelList() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CardModelList value)  $default,){
+final _that = this;
+switch (_that) {
+case _CardModelList():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CardModelList value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CardModelList() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<CardModel> cards)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CardModelList() when $default != null:
+return $default(_that.cards);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<CardModel> cards)  $default,) {final _that = this;
+switch (_that) {
+case _CardModelList():
+return $default(_that.cards);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<CardModel> cards)?  $default,) {final _that = this;
+switch (_that) {
+case _CardModelList() when $default != null:
+return $default(_that.cards);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CardModelListImpl implements _CardModelList {
-  _$CardModelListImpl({required final List<CardModel> cards}) : _cards = cards;
 
-  factory _$CardModelListImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CardModelListImplFromJson(json);
+class _CardModelList implements CardModelList {
+   _CardModelList({required final  List<CardModel> cards}): _cards = cards;
+  factory _CardModelList.fromJson(Map<String, dynamic> json) => _$CardModelListFromJson(json);
 
-  final List<CardModel> _cards;
-  @override
-  List<CardModel> get cards {
-    if (_cards is EqualUnmodifiableListView) return _cards;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_cards);
-  }
-
-  @override
-  String toString() {
-    return 'CardModelList(cards: $cards)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CardModelListImpl &&
-            const DeepCollectionEquality().equals(other._cards, _cards));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_cards));
-
-  /// Create a copy of CardModelList
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CardModelListImplCopyWith<_$CardModelListImpl> get copyWith =>
-      __$$CardModelListImplCopyWithImpl<_$CardModelListImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CardModelListImplToJson(
-      this,
-    );
-  }
+ final  List<CardModel> _cards;
+@override List<CardModel> get cards {
+  if (_cards is EqualUnmodifiableListView) return _cards;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_cards);
 }
 
-abstract class _CardModelList implements CardModelList {
-  factory _CardModelList({required final List<CardModel> cards}) =
-      _$CardModelListImpl;
 
-  factory _CardModelList.fromJson(Map<String, dynamic> json) =
-      _$CardModelListImpl.fromJson;
+/// Create a copy of CardModelList
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CardModelListCopyWith<_CardModelList> get copyWith => __$CardModelListCopyWithImpl<_CardModelList>(this, _$identity);
 
-  @override
-  List<CardModel> get cards;
-
-  /// Create a copy of CardModelList
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CardModelListImplCopyWith<_$CardModelListImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$CardModelListToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CardModelList&&const DeepCollectionEquality().equals(other._cards, _cards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_cards));
+
+@override
+String toString() {
+  return 'CardModelList(cards: $cards)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CardModelListCopyWith<$Res> implements $CardModelListCopyWith<$Res> {
+  factory _$CardModelListCopyWith(_CardModelList value, $Res Function(_CardModelList) _then) = __$CardModelListCopyWithImpl;
+@override @useResult
+$Res call({
+ List<CardModel> cards
+});
+
+
+
+
+}
+/// @nodoc
+class __$CardModelListCopyWithImpl<$Res>
+    implements _$CardModelListCopyWith<$Res> {
+  __$CardModelListCopyWithImpl(this._self, this._then);
+
+  final _CardModelList _self;
+  final $Res Function(_CardModelList) _then;
+
+/// Create a copy of CardModelList
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? cards = null,}) {
+  return _then(_CardModelList(
+cards: null == cards ? _self._cards : cards // ignore: cast_nullable_to_non_nullable
+as List<CardModel>,
+  ));
+}
+
+
+}
+
+// dart format on

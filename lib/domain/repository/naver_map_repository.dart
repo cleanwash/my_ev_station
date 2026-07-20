@@ -3,7 +3,16 @@ import 'package:geolocator/geolocator.dart';
 import 'package:my_ev_station/domain/model/charger_model.dart';
 
 class NaverMapRepository {
+  static const NLatLng _gwanghwamun = NLatLng(37.5759, 126.9769);
+
   NaverMapController? _mapController;
+
+  bool _isInSouthKorea(NLatLng position) {
+    return position.latitude >= 33.0 &&
+        position.latitude <= 38.7 &&
+        position.longitude >= 124.5 &&
+        position.longitude <= 132.0;
+  }
 
   void setController(NaverMapController controller) {
     _mapController = controller;
@@ -37,8 +46,12 @@ class NaverMapRepository {
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
 
-    return NCameraPosition(
-        target: NLatLng(position.latitude, position.longitude), zoom: 12);
+    var target = NLatLng(position.latitude, position.longitude);
+    if (!_isInSouthKorea(target)) {
+      target = _gwanghwamun;
+    }
+
+    return NCameraPosition(target: target, zoom: 12);
   }
 
   void addMarkers(List<ChargerModel> chargers) {

@@ -5,7 +5,7 @@ part 'map_ui_state.freezed.dart';
 part 'map_ui_state.g.dart';
 
 @freezed
-class MapUiState with _$MapUiState {
+abstract class MapUiState with _$MapUiState {
   factory MapUiState({
     @Default(false) bool isLoading,
     @Default([]) List<ChargerModel> chargers,

@@ -5,9 +5,9 @@ part 'main_ui_state.freezed.dart';
 part 'main_ui_state.g.dart';
 
 @freezed
-class MainUiState with _$MainUiState {
+abstract class MainUiState with _$MainUiState {
   factory MainUiState({
-    @Default(false) isLoading,
+    @Default(false) bool isLoading,
     @Default([]) List<CardModel> cards,
     String? error,
   }) = _MainUiState;

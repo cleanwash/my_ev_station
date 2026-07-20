@@ -8,8 +8,12 @@ class EvApi {
   final apiKey = dotenv.env['EV_API'];
 
   Future<List<ChargerModel>> getChargerInfo() async {
-    final response = await http.get(Uri.parse(
-        'https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey=$apiKey'));
+    final uri = Uri.https(
+      'apis.data.go.kr',
+      '/B552584/EvCharger/getChargerInfo',
+      {'serviceKey': apiKey},
+    );
+    final response = await http.get(uri);
 
     final transformer = Xml2Json();
     transformer.parse(utf8.decode(response.bodyBytes));

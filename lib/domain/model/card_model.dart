@@ -4,7 +4,7 @@ part 'card_model.freezed.dart';
 part 'card_model.g.dart';
 
 @freezed
-class CardModel with _$CardModel {
+abstract class CardModel with _$CardModel {
   factory CardModel({
     required String cardName,
     required String imageUrl,
@@ -17,7 +17,7 @@ class CardModel with _$CardModel {
 }
 
 @freezed
-class DiscountTier with _$DiscountTier {
+abstract class DiscountTier with _$DiscountTier {
   factory DiscountTier({
     required int maximumDiscount,
     required int monthlyDiscountRate,
@@ -29,7 +29,7 @@ class DiscountTier with _$DiscountTier {
 }
 
 @freezed
-class PreviousMonthPerformance with _$PreviousMonthPerformance {
+abstract class PreviousMonthPerformance with _$PreviousMonthPerformance {
   factory PreviousMonthPerformance({
     required int min,
     int? max,
@@ -40,7 +40,7 @@ class PreviousMonthPerformance with _$PreviousMonthPerformance {
 }
 
 @freezed
-class CardModelList with _$CardModelList {
+abstract class CardModelList with _$CardModelList {
   factory CardModelList({
     required List<CardModel> cards, // Changed from CardModels to cards
   }) = _CardModelList;
