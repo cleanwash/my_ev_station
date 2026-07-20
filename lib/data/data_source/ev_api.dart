@@ -11,7 +11,7 @@ class EvApi {
     final uri = Uri.https(
       'apis.data.go.kr',
       '/B552584/EvCharger/getChargerInfo',
-      {'serviceKey': apiKey},
+      {'serviceKey': apiKey, 'pageNo': '1', 'numOfRows': '100'},
     );
     final response = await http.get(uri);
 

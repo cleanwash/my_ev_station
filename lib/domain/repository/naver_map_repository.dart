@@ -54,11 +54,16 @@ class NaverMapRepository {
     return NCameraPosition(target: target, zoom: 12);
   }
 
-  void addMarkers(List<ChargerModel> chargers) {
+  void addMarkers(List<ChargerModel> chargers,
+      {void Function(ChargerModel charger)? onTap}) {
     if (_mapController == null) return;
     _mapController!.clearOverlays();
 
+    // 하나의 충전소(statId)에 충전기가 여러 대 있을 수 있으므로 마커는 충전소당 1개만 표시
+    final seenStatIds = <String>{};
     for (var charger in chargers) {
+      if (!seenStatIds.add(charger.statId)) continue;
+
       final marker = NMarker(
         id: charger.statId,
         position: NLatLng(charger.lat, charger.lng),
@@ -71,6 +76,7 @@ class NaverMapRepository {
 
       marker.setOnTapListener((overlay) {
         marker.openInfoWindow(infoWindow);
+        onTap?.call(charger);
       });
 
       _mapController!.addOverlay(marker);

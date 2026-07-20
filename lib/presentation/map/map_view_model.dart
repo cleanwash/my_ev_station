@@ -21,7 +21,6 @@ class MapViewModel with ChangeNotifier {
     try {
       final chargers = await _getChargersUseCase.execute();
       print('받아온 충전소 데이터: ${chargers.length}개');
-      print('받아온 충전소 데이터: $chargers 정보');
       _state = state.copyWith(
         isLoading: false,
         chargers: chargers,
@@ -33,22 +32,28 @@ class MapViewModel with ChangeNotifier {
       );
     }
     notifyListeners();
+    _renderMarkers();
+  }
+
+  void _renderMarkers() {
+    if (!_getChargersUseCase.mapRepository.isControllerReady()) return;
+    if (state.chargers.isEmpty) return;
+    _getChargersUseCase.mapRepository
+        .addMarkers(state.chargers, onTap: selectCharger);
   }
 
   Future<void> setMapController(NaverMapController controller) async {
     print('맵 컨트롤러 설정');
     _getChargersUseCase.mapRepository.setController(controller);
 
+    // 마커 표시는 위치 조회 성공 여부와 무관하게 항상 시도한다.
+    _renderMarkers();
+
     try {
       print('위치 정보 가져오기 시도');
       final myLocation =
           await _getChargersUseCase.mapRepository.getMyLocation();
       await _getChargersUseCase.mapRepository.moveToLocation(myLocation);
-
-      if (state.chargers.isNotEmpty) {
-        print('마커 추가 시도: ${state.chargers.length}개');
-        _getChargersUseCase.mapRepository.addMarkers(state.chargers);
-      }
     } catch (e) {
       print('위치 권한 오류: $e');
     }

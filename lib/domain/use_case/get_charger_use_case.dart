@@ -12,12 +12,6 @@ class GetChargersUseCase {
   });
 
   Future<List<ChargerModel>> execute() async {
-    final chargers = await repository.getChargers();
-
-    if (mapRepository.isControllerReady()) {
-      mapRepository.addMarkers(chargers);
-    }
-
-    return chargers;
+    return repository.getChargers();
   }
 }

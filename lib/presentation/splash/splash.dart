@@ -66,6 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ],
         next: const Text("Next"),
         done: const Text("Done"),
+        safeAreaList: const [true, true, true, true],
         onDone: () async {
           final prefs = await SharedPreferences.getInstance();
           await prefs.setBool('onboarding_complete', true);
